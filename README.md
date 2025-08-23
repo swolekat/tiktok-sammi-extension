@@ -5,6 +5,9 @@ After discovering that streamerbot had a way to get tiktok data in, I wondered i
 ## Requirements
 You MUST be running [Tikfinity](https://tikfinity.zerody.one/) locally. This runs a websocket server that the extension will use.
 
+## TOS Warning
+Tiktok does NOT have concrete rules around third party integrations. So please use at your own risk.
+
 ## Installation
 Inside of SAMMI, on the left select bridge. Select install new extension. Install tiktok-sammi-extension.sef.
 
