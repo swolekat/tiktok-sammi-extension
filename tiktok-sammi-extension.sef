@@ -2,7 +2,7 @@
 TikTok Sammi Extension
 
 [extension_info]
-version 0.0.2 by Swolekat
+version 0.0.3 by Swolekat
 [insert_external]
 <div>
     <h1>
@@ -50,10 +50,10 @@ function tiktokMain() {
             socket = new WebSocket(tiktokWebsocketUrl);
 
             socket.onopen = function(event){
-                SAMMI.alert(`TikTok connected on ${port}`);
+                SAMMI.alert(`TikTok connected`);
             };
 
-            listeningWebsocket.onmessage = (payload) => {
+            socket.onmessage = (payload) => {
                 let message = payload.data;
                 if(typeof message === 'string'){
                     SAMMI.alert(`TikTok string`);
@@ -77,6 +77,8 @@ function tiktokMain() {
         // 2 means it's closing. Delete and try to reopen
         deleteSocketAndRetry();
     }
+
+    openSocket();
 }
 
 [insert_over]
