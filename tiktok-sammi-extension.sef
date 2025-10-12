@@ -33,6 +33,7 @@ function tiktokMain() {
     }
 
     function sendTriggers(payloadObject) {
+        SAMMI.triggerExt('TikTok Chat', data);
         const {event, data} = payloadObject;
         SAMMI.alert(`TikTok ${event}`);
         if(event === 'chat') {
