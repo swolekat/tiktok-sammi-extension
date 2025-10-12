@@ -2,14 +2,14 @@
 TikTok Sammi Extension
 
 [extension_info]
-version 0.0.3 by Swolekat
+version 0.0.4 by Swolekat
 [insert_external]
 <div>
     <h1>
         TikTok SAMMI Extension
     </h1>
     <h2>
-        Version 0.0.3
+        Version 0.0.4
     </h2>
     <p>
         Hewwow, thank you for installing my plugin. I have instructions on the <a href="https://github.com/swolekat/tiktok-sammi-extension">github</a> if you get lost.
@@ -34,6 +34,7 @@ function tiktokMain() {
 
     function sendTriggers(payloadObject) {
         const {event, data} = payloadObject;
+        SAMMI.alert(`TikTok ${event}`);
         if(event === 'chat') {
             SAMMI.triggerExt('TikTok Chat', data);
         }
@@ -59,8 +60,11 @@ function tiktokMain() {
                     SAMMI.alert(`TikTok string`);
                     try {
                          message = JSON.parse(message);
+
                          sendTriggers(message);
-                    } catch (e) {}
+                    } catch (e) {
+                        SAMMI.alert(`TikTok could not parse`);
+                    }
                     return;
                 }
                 SAMMI.alert(`TikTok object`);
