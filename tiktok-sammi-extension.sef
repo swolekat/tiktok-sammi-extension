@@ -65,6 +65,7 @@ function tiktokMain() {
                          sendTriggers(message);
                     } catch (e) {
                         SAMMI.alert(`TikTok could not parse`);
+                        SAMMI.alert(message);
                     }
                     return;
                 }
