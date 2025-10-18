@@ -8,6 +8,9 @@ You MUST be running [Tikfinity](https://tikfinity.zerody.one/) locally. This run
 ## TOS Warning
 Tiktok does NOT have concrete rules around third party integrations. So please use at your own risk.
 
+<img width="818" height="694" alt="image" src="https://github.com/user-attachments/assets/f2a2b64d-9a40-4fb5-8bb5-7de7323f9c04" />
+
+
 ## Installation
 Inside of SAMMI, on the left select bridge. Select install new extension. Install tiktok-sammi-extension.sef.
 
