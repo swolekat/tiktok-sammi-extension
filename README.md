@@ -14,10 +14,13 @@ Inside of SAMMI, on the left select bridge. Select install new extension. Instal
 That's it. There's no deck, but you should see the extension from inside the bridge
 
 ## Usage
-There are three triggers:
+There are four triggers:
 * TikTok Chat
 * TikTok Gift
 * TikTok Subscribe
+* TikTok Like
+
+You can use wildcards such as `TikTok Chat *test*` in your trigger for wildcard matching
 
 ## Contact
 https://www.twitch.tv/swolekat
