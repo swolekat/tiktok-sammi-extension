@@ -9,7 +9,7 @@ version 1.0.1 by Swolekat
         TikTok SAMMI Extension
     </h1>
     <h2>
-        Version 1.0.1
+        Version 1.2.0
     </h2>
     <p>
         Hewwow, thank you for installing my plugin. I have instructions on the <a href="https://github.com/swolekat/tiktok-sammi-extension">github</a> if you get lost.
@@ -37,17 +37,27 @@ function tiktokMain() {
         if(event === 'chat') {
             SAMMI.triggerExt(`TikTok Chat ${data.comment}`, {
                 ...data,
-                message: data.comment
+                message: data.comment,
+                display_name: data.uniqueId,
             });
         }
         if(event === 'gift') {
-            SAMMI.triggerExt('TikTok Gift', data);
+            SAMMI.triggerExt('TikTok Gift', {
+                ...data,
+                display_name: data.uniqueId,
+            });
         }
         if(event === 'subscribe') {
-            SAMMI.triggerExt('TikTok Subscribe', data);
+            SAMMI.triggerExt('TikTok Subscribe', {
+                 ...data,
+                 display_name: data.uniqueId,
+             });
         }
         if(event === 'like') {
-            SAMMI.triggerExt('TikTok Like', data);
+            SAMMI.triggerExt('TikTok Like', {
+                ...data,
+                display_name: data.uniqueId,
+            });
         }
     }
 
